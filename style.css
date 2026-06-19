@@ -9,6 +9,9 @@
     --button-bg: #512da8;
 
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
