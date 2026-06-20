@@ -1,4 +1,4 @@
-const words = ["AI Engineer", "Gen AI Developer", "Machine Learning Engineer", "Data Scientist"];
+const words = ["Python Developer","AI Engineer", "Machine Learning Engineer", "Data Scientist"];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -215,4 +215,25 @@ document.addEventListener("DOMContentLoaded", () => {
         const phoneDisplay = phoneCard.getAttribute("data-display-phone");
         setupSecureAction(phoneCard, phoneRaw, phoneDisplay);
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("mobile-menu");
+    const navLinks = document.getElementById("nav-links");
+    const links = navLinks.querySelectorAll("a");
+
+    const toggleMenu = () => {
+        menuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+    };
+
+    menuToggle.addEventListener("click", toggleMenu);
+
+    links.forEach(link => {
+        link.addEventListener("click", () => {
+            if (navLinks.classList.contains("active")) {
+                toggleMenu();
+            }
+        });
+    });
 });
